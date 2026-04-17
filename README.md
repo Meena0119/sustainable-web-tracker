@@ -1,37 +1,27 @@
-🌱 Sustainable Web Tracker Dashboard
-A web-based analytics dashboard designed to visualize the carbon footprint and data usage of websites. This project aims to promote digital sustainability by tracking CO₂ emissions and data transfer in real-time.
+# Sustainable Web Tracker
 
-📊 Key Features
-CO₂ Emissions Tracking: Visualizes the amount of carbon emitted (in grams) by different websites.
-Data Transfer Analysis: Displays the total data transferred (in MB) with an interactive breakdown.
-Interactive Charts:
-Bar chart for comparing CO₂ emissions.
-Doughnut chart for visualizing data share.
-Green Hosting Check: Identifies if a website is hosted on a green server.
-Responsive UI: Built with Bootstrap 5 to work seamlessly on desktop and mobile.
-🛠️ Tech Stack
-HTML5
-CSS3 (Bootstrap 5)
-JavaScript (Vanilla JS)
-Chart.js (For data visualization)
-🚀 How to Run
-You don't need to install anything. Just follow these steps:
+A clean, modern Google Chrome extension that tracks the carbon footprint of the websites you visit! 🌍
 
-Download or clone the repository.
-Open the index.html file in any web browser (Chrome, Firefox, Edge, etc.).
-The dashboard will load with the demo data.
-📸 Project Preview
-(Yahan apni dashboard ka screenshot dal dena - "Add file" karke)
+## Features
+- **Carbon Estimator:** Automatically tracks how much data each website downloads and estimates the CO₂ emissions (1 MB = ~0.5g CO₂).
+- **Green Host Check:** Checks if the website is hosted using renewable energy (powered by The Green Web Foundation API).
+- **Lifetime Tracking:** Keeps a running total of the data you've downloaded across all sites.
+- **Premium UI:** Uses a beautiful "glassmorphism" design that shifts from green (eco-friendly) to red (high emissions).
 
-Dashboard Preview
+## How to Install (for Chrome)
 
-📝 Future Scope
-Integration with a real database to store historical user data.
-API integration for live website scanning.
-Adding user authentication to save personalized reports.
-👨‍💻 Developer
-Developed as part of a sustainability awareness initiative.
+1. Open Google Chrome.
+2. In the top URL bar, type: `chrome://extensions/` and hit Enter.
+3. In the top right corner, turn on **Developer mode**.
+4. Click the **Load unpacked** button in the top left.
+5. Select the folder containing this project (the `kuch bhi` folder on your Desktop).
+6. That's it! You should now see the little puzzle piece (or leaf, if you add an icon later) in your browser toolbar. Pin it to access it easily!
 
-📄 License
-This project is open source and available under the MIT License.
+## How it works
 
+- **`manifest.json`**: This is the instruction manual that tells Chrome what our extension is and what permissions it needs.
+- **`background.js`**: This is the engine. It runs in the background, listening to every web request to count how many bytes of data are being transferred. It also checks The Green Web Foundation API to see if the website is green.
+- **`popup.html` & `popup.css`**: These create the user interface you see when you click the extension. The CSS uses modern gradients and blur effects to look sleek.
+- **`popup.js`**: The brains of the popup. It talks to `background.js`, gets the current numbers, does the math (converting bytes to megabytes and CO₂), and updates the screen.
+
+Have fun saving the planet! 🌱
