@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Web Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <header>
+            <div class="logo">🌿</div>
+            <h1>Eco Tracker</h1>
+        </header>
+
+        <main>
+            <div class="card current-page">
+                <h2>Current Page</h2>
+                <div class="host-info" id="hostInfo">
+                    Checking Host...
+                </div>
+                <div class="metric">
+                    <span class="value" id="pageCo2">0.00</span>
+                    <span class="unit">g CO₂</span>
+                </div>
+                <div class="sub-metric">
+                    Data: <span id="pageData">0</span> MB
+                </div>
+            </div>
+
+            <div class="card lifetime">
+                <h2>Lifetime Tracker</h2>
+                <div class="metric">
+                    <span class="value" id="totalCo2">0.00</span>
+                    <span class="unit">g CO₂</span>
+                </div>
+            </div>
+        </main>
+        
+        <div class="badge-container" id="ecoBadge" style="display: none;">
+            <span>🍃 Green Host Verified</span>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
