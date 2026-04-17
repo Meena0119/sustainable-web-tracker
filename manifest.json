@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Sustainable Web Tracker",
+  "version": "1.0",
+  "description": "Tracks the data transferred by websites and calculates their carbon footprint.",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Web Sustainability Tracker"
+  }
+}
